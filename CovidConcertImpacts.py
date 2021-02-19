@@ -18,7 +18,7 @@ print("Setup Complete")
 
 
 #get path of file to read
-my_filepath = r"C:\Users\ARI\Documents\Databases Spring 2019\Covid Concert Proj\CovidConcertImpacts.xlsx"
+my_filepath = r"C:\Users\...\Covid Concert Proj\CovidConcertImpacts.xlsx"
 #read file into variable
 cc_data = pd.read_excel(my_filepath) 
 
@@ -156,12 +156,6 @@ cc_data['HoursOfMusicADay'].head()
 #count how many times the value for hours of music was chosen and set it to a variable
 music_time= cc_data['HoursOfMusicADay'].value_counts().to_frame()
 music_time
-
-
-# In[ ]:
-
-
-
 
 
 # In[25]:
@@ -303,15 +297,11 @@ df3
 # In[115]:
 
 
-#plot bar graph for how many people used each way to listen to music
+#plot bar graph for how people suported artists
 df3.plot(kind='bar', figsize=(13,5))
 plt.ylabel('Number of Users')
 plt.xlabel('Support Artists')
 plt.title('How people support Artists')
-
-
-# In[ ]:
-
 
 #CONTINUE TO WATCH LIVESTREAMS AFTER COVID
 
@@ -413,7 +403,7 @@ df4
 # In[159]:
 
 
-#plot bar graph for how many people used each way to listen to music
+#plot bar graph for future concert memories
 df4.plot(kind='bar', figsize=(13,5))
 plt.ylabel('Number of Users')
 plt.xlabel('Memories')
@@ -446,7 +436,7 @@ df5
 # In[166]:
 
 
-#plot bar graph for how many people used each way to listen to music
+#plot bar graph for concert memories
 df5.plot(kind='bar', figsize=(13,5))
 plt.ylabel('Number of Users')
 plt.xlabel('Memories')
@@ -533,7 +523,7 @@ precautions['Type'].value_counts(normalize=True)
 # In[197]:
 
 
-#bar plot to show which music software is used the most
+#bar plot to show prcautions
 dp.plot(kind='bar',figsize=(14,5), color='#04B404')
 plt.title('Type of Precautions Wanted')
 plt.xlabel('Precaution Type')
@@ -606,7 +596,7 @@ venuePre['Type'].value_counts(normalize=True)
 # In[72]:
 
 
-#bar plot to show which music software is used the most
+#bar plot to show venue precautions
 dv.plot(kind='bar',figsize=(14,5), color='blue')
 plt.title('Type of Precautions Wanted for Venues')
 plt.xlabel('Precaution Type')
@@ -655,7 +645,7 @@ da
 # In[231]:
 
 
-#bar plot to show which music software is used the most
+#bar plot to show which artists people want to see in the future
 da.plot(kind='bar',figsize=(14,5), color='purple')
 plt.title('Which Artists People Want to See Post Covid')
 plt.xlabel('Artists')
@@ -709,15 +699,9 @@ dg
 # In[262]:
 
 
-#bar plot to show which music software is used the most
+#bar plot to show which genres in popularity order
 dg.plot(kind='bar',figsize=(14,5), color='purple')
 plt.title('Genres')
 plt.xlabel('Genres')
 plt.ylabel('Count of Users')
-
-
-# In[ ]:
-
-
-
 
